@@ -12,7 +12,11 @@ public class Ejercicio01{
         System.out.println("Ingrese primer número: ");
         num_1 = entrada.nextInt();
 
-    
-    git add .
-    git commit -m""
-    git push origin
+        System.out.println("Ingrese segundo número: ");
+        num_2 = entrada.nextInt();
+
+        result = num_1+num_2;
+
+        System.out.println("El resultado es: "+result);
+    }
+}
