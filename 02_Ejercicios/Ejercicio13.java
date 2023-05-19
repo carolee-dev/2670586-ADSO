@@ -4,17 +4,20 @@ public class Ejercicio13 {
     public static void main(String[]args){
         Scanner entrada = new Scanner(System.in);
 
-        int seg; 
-        float hr=3600, min=60;
-
         System.out.println("Ingrese los segundos que desea convertir: ");
-        seg = entrada.nextInt();
+        int seg = entrada.nextInt();
 
-        hr = seg/hr;
-        min = seg/min;
-        seg = seg;
+        int sobrante = 0; 
 
-        System.out.println("Los "+seg+" segundos ingresados equivalen a "+hr+" horas y "+min+" minutos.");
+        int hr = seg/3600;
+        sobrante = seg - (hr*3600);
+        
+        int min = sobrante/60;
+        sobrante = sobrante - (min*60);
+
+        seg = sobrante/1;
+
+        System.out.println("Los "+seg+" segundos ingresados equivalen a "+hr+" horas "+min+" minutos y "+seg+" segundos.");
 
     }
     
