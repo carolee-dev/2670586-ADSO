@@ -17,7 +17,6 @@ public class Ejercicio14 {
         not4 = teclado.nextFloat();
         // sumNot = not1 + not2 + not3 + not4;
 
-
         System.out.println("De 1 a 5, ingrese créditos de la materia 1: ");
         cred1 = teclado.nextInt();
         System.out.println("De 1 a 5, ingrese créditos de la materia 2: ");
