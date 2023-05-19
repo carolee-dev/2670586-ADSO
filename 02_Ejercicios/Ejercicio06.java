@@ -7,12 +7,13 @@ public class Ejercicio06{
         int vals, i, x, suma=0; 
         double promedio;
 
-        System.out.println("Del 1 al 10, ¿cuántos valores desea ingresar?");
+        System.out.println("Del 1 al 10, ¿cuántas valores desea ingresar?");
         vals=entrada.nextInt();
 
         for(i=1;i<=vals; i++){
-            System.out.println("Valor["+i+"]= ");
+            System.out.println("Ingrese valor["+i+"]: ");
             x=entrada.nextInt();
+
             suma=suma+x;
         }
 
