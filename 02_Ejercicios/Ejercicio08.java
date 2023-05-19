@@ -1,8 +1,7 @@
 import java.util.Scanner;
-public class Ejercicio08 {
+public class Ejercicio08{
     public static void main(String[]args){
         Scanner entrada = new Scanner(System.in);
-
 
         String nombre1, apellido1;
 
