@@ -18,11 +18,11 @@ public class Ex01_SaludoEdad {
             }
         }
 
-        if(edad < 0){
+        if(edad <= 0){
             System.out.println("Digita una edad válida");
         }
 
-        if(edad > 100){
+        if(edad >= 100){
             System.out.println("Haz tenido una larga vida");
         }
 
