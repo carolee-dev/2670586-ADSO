@@ -9,11 +9,11 @@ public class Ejercicio09 {
         System.out.println("Ingresa un número: ");
         num = teclado.nextInt();
 
-        if (num % 2 = 0){
-            System.out.println("El número mayor es par.");
+        if (num % 2 == 0){
+            System.out.println("El número es par.");
         }
         else{
-            System.out.println("El número mayor es impar.");
+            System.out.println("El número es impar.");
         } 
 
     }
