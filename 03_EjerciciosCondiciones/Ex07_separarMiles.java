@@ -10,7 +10,6 @@ public class Ex07_separarMiles {
 
         System.out.println("// ---------- FORMATO DE MONEDA ----------- //");
 
-
         int miles1 = (nums % 1000000000) / 1000000;
         int miles2 = (nums % 1000000) / 1000;
         int miles3 = (nums % 1000) / 1;
