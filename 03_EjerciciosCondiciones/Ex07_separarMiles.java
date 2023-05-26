@@ -5,7 +5,7 @@ public class Ex07_separarMiles {
 
         int nums = 0;
 
-        System.out.println("Ingresa un número máximo de 10 dígitos e inferior a dos mil millones: ");
+        System.out.println("Ingresa un número máximo de 10 dígitos inferior a 2.147.483.647: ");
         nums = input.nextInt();
 
         System.out.println("// ---------- FORMATO DE MONEDA ----------- //");
@@ -16,27 +16,26 @@ public class Ex07_separarMiles {
         int miles3 = (nums % 1000) / 1;
         int miles4 = (nums % 10);
 
-        if (nums > 999999999 && nums <= 2147483647){
-            System.out.println("Moneda: $ "+miles1+"."+miles2+"."+miles3+"."+miles4);
-        }
-
-        if (nums > 999999 && nums <= 999999999){
-            System.out.println("Moneda: $ "+miles1+"."+miles2+"."+miles3);
-        }
-
-        if (nums > 999 && nums <= 999999){
-            System.out.println("Moneda: $ "+miles1+"."+miles2);
-        }
-
-        if (nums >= 0  && nums <= 999){
-            System.out.println("Moneda: $ "+miles1+"."+miles2);
-        }
-
         if (nums > 2147483647){
             System.out.println("Ingrese número no mayor a 2.147.483.647 ");
         }
-        
 
+        if (nums >= 1000000000 && nums <= 2147483647){
+            System.out.println("Moneda: $ "+miles1+"."+miles2+"."+miles3+"."+miles4);
+        }
+
+        if (nums >= 1000000 && nums <= 1000000000){
+            System.out.println("Moneda: $ "+miles1+"."+miles2+"."+miles3);
+        }
+
+        if (nums > 1000 && nums <= 1000000){
+            System.out.println("Moneda: $ "+miles1+"."+miles2);
+        }
+
+        if (nums >= 0  && nums <= 1000){
+            System.out.println("Moneda: $ "+miles1+"."+miles2);
+        }
+        
     }
     
 }
