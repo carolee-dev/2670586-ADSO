@@ -13,11 +13,20 @@ public class Ex03_cartesiano {
         ejeY = input.nextInt();
 
         if(ejeX >= 1 && ejeY >= 1){
-            System.out.println("Estás en el Cuadrante 1.");}
-            else{if(ejeX <= -1 && ejeY >= 1) System.out.println("Estás en el Cuadrante 2. ");
-            else if(ejeX <= -1 && ejeY <= -1) System.out.println("Estás en el Cuadrante 3.");}
-        if(ejeX >= 1 && ejeY <= -1) System.out.println("Estás en el Cuadrante 4.");
-        else if(ejeX == 0 && ejeY == 0){System.out.println("Estás en el Origen o Punto Cero. ");}
+            System.out.println("Estás en el Cuadrante 1.");
+        }else{
+            if(ejeX <= -1 && ejeY >= 1){
+                System.out.println("Estás en el Cuadrante 2. ");
+            }else if(ejeX <= -1 && ejeY <= -1){
+                System.out.println("Estás en el Cuadrante 3.");
+            }
+        }
+
+        if(ejeX >= 1 && ejeY <= -1){
+            System.out.println("Estás en el Cuadrante 4.");
+        }else if(ejeX == 0 && ejeY == 0){
+            System.out.println("Estás en el Origen o Punto Cero. ");
+        }
 
     }
     
