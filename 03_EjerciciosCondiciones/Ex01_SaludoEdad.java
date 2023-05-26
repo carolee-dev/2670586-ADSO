@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex01_SaludoEdad {
+public class Ex01_saludoEdad {
     public static void main(String[]args){
         Scanner teclado = new Scanner(System.in);
 
@@ -16,8 +16,7 @@ public class Ex01_SaludoEdad {
         }else if(edad >= 18 && edad < 100){
             System.out.println("Eres mayor de edad y pagas un impuesto de $200.000 ");
         }else{
-            System.out.println("Edad ingresada no válida.");
+            System.out.println("Entrada fuera de los rangos permitidos.");
         }
-
     }
 }

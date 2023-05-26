@@ -10,7 +10,7 @@ public class Ex02_parImpar {
         numero = entrada.nextInt();
 
         if(numero <= 100 || numero >= 999)
-        {System.out.println("El número deber ser de 3 digitos. ");}
+        {System.out.println("Try again. El número deber ser de 3 digitos. ");}
         else
         {if (numero % 2 == 0)
             {System.out.println("El número es par. ");}
