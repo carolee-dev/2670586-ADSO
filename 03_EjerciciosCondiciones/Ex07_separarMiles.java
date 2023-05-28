@@ -31,7 +31,6 @@ public class Ex07_separarMiles {
         if (nums >= 100  && nums <= 1000){
             System.out.println("Moneda: $ "+miles1+".");
         }
-
         */
 
         if (nums >= 0 && nums <= 2147483647){
@@ -52,7 +51,7 @@ public class Ex07_separarMiles {
 
             // Algoritmo to print millones
             if(millones == 0){
-                if(miles_millones !=0){
+                if(miles_millones!=0){
                     System.out.print("000.");
                 }else{
                     System.out.print("");
@@ -62,16 +61,16 @@ public class Ex07_separarMiles {
                     if(miles_millones != 0){
                         System.out.print("00"+millones+".");
                     }else{
-                        System.out.print(".");
+                        System.out.print(millones+".");
                     }   
                 } // Sea XX 
-                if(millones >=10 && millones <= 99){
+                if(millones >= 10 && millones <= 99){
                     if(miles_millones != 0){
                         System.out.print("0"+millones+".");
                     }else{
                         System.out.print(millones+".");
                     }
-                } // Sea XXX
+                } // Sea xxx
                 if(millones >= 100 && millones <= 999){
                     System.out.print(millones+".");
                 }
@@ -85,7 +84,7 @@ public class Ex07_separarMiles {
                     System.out.print("");
                 }
             }else{ // Sea X
-                if(miles >= 1 && miles <=9){
+                if(miles >= 1 && miles <= 9){
                     if(miles_millones != 0 || millones != 0){
                         System.out.print("00"+miles+".");
                     }else{
@@ -96,9 +95,9 @@ public class Ex07_separarMiles {
                     if(miles_millones != 0 || millones != 0){
                         System.out.print("0"+miles+".");
                     }else{
-                        System.out.print(".");
+                        System.out.print(miles+".");
                     }
-                } // Sea XXX    
+                } // Sea xxx    
                 if(miles >= 100 && miles <= 999){
                     System.out.print(miles+".");
                 }     
