@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Ejercicio16_interesComp {
     public static void main(String[]args){
         Scanner teclado = new Scanner(System.in);
-        
+
 
         System.out.println("¿Cuánto es su capital inicial? ");
         int capital1 = teclado.nextInt();
@@ -12,7 +12,7 @@ public class Ejercicio16_interesComp {
 
         /* 
         System.out.println("¿A cuántos años va a invertir el capital? ");
-        nPeriodo = teclado.nextInt();
+        int nPeriodo = teclado.nextInt();
         */
 
         int interes1 = capital1 * iTasa / 100;
