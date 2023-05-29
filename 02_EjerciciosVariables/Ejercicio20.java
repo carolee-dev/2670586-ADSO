@@ -12,7 +12,8 @@ public class Ejercicio20 {
         int digito2 = (numero%100)/10;
         int digito3 = (numero%1000)/100;
         int digito4 = (numero%10000)/1000;
-        int digito5 = (numero%100000)/10000; */
+        int digito5 = (numero%100000)/10000; 
+        */
 
         int digito1 = (numero%100000)/10000;
         int digito2 = (numero%10000)/1000;
