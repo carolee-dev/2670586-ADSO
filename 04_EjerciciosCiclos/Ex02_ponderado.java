@@ -12,10 +12,10 @@ public class Ex02_ponderado{
         int i = 1;
         
         while(i <= cantidad_materias){
-            System.out.println("Nota materia "+i+" : ");
+            System.out.println("Nota Materia "+i+" : ");
             double nota = tecla.nextDouble();
 
-            System.out.println("Créditos materia "+i+" : ");
+            System.out.println("Créditos Materia "+i+" : ");
             double credito = tecla.nextDouble();
 
             sumaNotas = sumaNotas + (nota*credito);
