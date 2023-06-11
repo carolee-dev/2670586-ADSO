@@ -11,12 +11,19 @@ public class Ejplo_doWhile{
 		System.out.print("--> Ingrese la cantidad de Múltiplos: ");
 		int multiplos = teclado.nextInt();
 
+    //    int contador = 0;
+    //    do{
+    //        int resultado = numero * contador;
+    //        System.out.println(numero+" x "+contador+" = "+resultado);
+    //        contador = contador + 1;
+    //    }while(contador <= multiplos);
+
         int contador = 0;
         do{
-            int resultado = numero * contador;
-            System.out.println(numero+" x "+contador+" = "+resultado);
-            contador = contador + 1;
-        }while(contador <= multiplos);
+            
+        }
+
+
 
     }
 }

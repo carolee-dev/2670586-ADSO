@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejplo_for{
+public class Ejplo_forInverso{
 	public static void main(String[]args){
 		
 		Scanner entrada = new Scanner(System.in);
@@ -11,11 +11,6 @@ public class Ejplo_for{
 		System.out.print("--> Ingrese la cantidad de Múltiplos: ");
 		int multiplos = entrada.nextInt();
 
-		for(int contador = 1; contador <= multiplos; contador = contador + 1){
-            int resultado = numero * contador;
-            System.out.println(numero+" x "+contador+" = "+resultado);
-        }	
-
         /*
         En ciclo 'for' NO hay que crear variable iteradora.
         Está dentro de la estructura:
@@ -23,6 +18,11 @@ public class Ejplo_for{
             Bloque de código
         }
         */
+
+        for(int contador = multiplos; contador >= 0; contador = contador - 1){
+            int resultado = numero * contador;
+            System.out.println(numero+" x "+contador+" = "+resultado);
+        }
 
 	}
 }
