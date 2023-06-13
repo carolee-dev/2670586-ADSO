@@ -20,10 +20,10 @@ public class Ejplo_doWhile{
 
         int contador = 0;
         do{
-            
-        }
-
-
+            int resultado = numero *contador;
+            System.out.println(numero+" x "+contador+" = "+resultado);
+            contador = contador + 1;
+        }while(contador <= multiplos);
 
     }
 }
