@@ -8,13 +8,13 @@ public class Ex06_menuDigitos {
 
         System.out.println("Ingresa un número máximo de 6 dígitos: ");
         numero = entrada.nextInt();
-        
-        int digito1 = (numero % 10);
-        int digito2 = (numero % 100)/10;
-        int digito3 = (numero % 1000)/100;
-        int digito4 = (numero % 10000)/1000;
-        int digito5 = (numero % 100000)/10000;
-        int digito6 = (numero % 1000000)/100000;
+
+        int digito1 = (numero % 1000000)/100000;
+        int digito2 = (numero % 100000)/10000;
+        int digito3 = (numero % 10000)/1000;
+        int digito4 = (numero % 1000)/100;
+        int digito5 = (numero % 100)/10;
+        int digito6 = (numero % 10);
 
 
         System.out.println("// -------------------------------------------------------------- //");
