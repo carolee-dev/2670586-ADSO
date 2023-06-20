@@ -1,13 +1,13 @@
 import java.util.Scanner;
+
 public class Ex16_interesComp{
     public static void main(String[]args){
         Scanner teclado = new Scanner(System.in);
 
-
-        System.out.println("¿Cuánto es su capital inicial? ");
+        System.out.print("-->¿Cuánto es su capital inicial? ");
         int capital1 = teclado.nextInt();
 
-        System.out.println("¿Con qué tasa de interés anual quiere calcular la inversión? ");
+        System.out.print("-->¿Con qué tasa de interés quiere calcular la inversión? ");
         int iTasa = teclado.nextInt();
  
         /* 
@@ -30,7 +30,7 @@ public class Ex16_interesComp{
         int interes5 = periodo4 * iTasa / 100;
         int periodo5 = interes5 + periodo4;
 
-        System.out.println("Vea a continuación una proyección anual de su inversión al "+iTasa+"%: ");
+        System.out.println("Vea a continuación una proyección mensual de su inversión al "+iTasa+"%: ");
         System.out.println("Total periodo 1: "+periodo1+"  Monto generado por los intereses: "+interes1);
         System.out.println("Total periodo 2: "+periodo2+"  Monto generado por los intereses: "+interes2);
         System.out.println("Total periodo 3: "+periodo3+"  Monto generado por los intereses: "+interes3);
@@ -39,7 +39,7 @@ public class Ex16_interesComp{
         System.out.println("---------------------------------------------------------------");
         
         /* 
-        int capitalFinal = capital1*(1+iTasa/100)^(tiempo);
+        int capitalFinal = capital1*(1.0+iTasa/100)^(tiempo);
         int inteCompuesto = capitalFinal-capital1;
 
         System.out.println("En "+tiempo+" años, el monto generado por los intereses será de: "+inteCompuesto);
