@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio15 {
+public class Ex15_convertirLongitud{
     public static void main(String[]args){
         Scanner entrada = new Scanner(System.in);
         

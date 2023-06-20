@@ -1,18 +1,18 @@
 import java.util. Scanner;
 
-public class Ejercicio12 {
+public class Ex12_calcRectangulo{
     public static void main(String[]args){
         Scanner teclado = new Scanner (System.in);
 
-        float b, h, area;
+        float base, height, area;
 
         System.out.println("Digite base del rectángulo: ");
-        b = teclado.nextFloat();
+        base = teclado.nextFloat();
 
         System.out.println("Digite altura del rectángulo:");
-        h = teclado.nextFloat();
+        height = teclado.nextFloat();
 
-        area = b * h;
+        area = base * height;
 
         System.out.println("El área del rectángulo es: "+area+"²");
 

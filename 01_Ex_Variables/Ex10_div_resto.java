@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio10 {
+public class Ex10_div_resto{
     public static void main(String[]args){
         Scanner teclado = new Scanner(System.in);
 
@@ -8,7 +8,7 @@ public class Ejercicio10 {
 
         System.out.println("Ingrese dos números: ");
         num1 = teclado.nextFloat();
-        num2 = teclado.nextInt();
+        num2 = teclado.nextFloat();
 
         div = num1/num2;
         resid = num1%num2;

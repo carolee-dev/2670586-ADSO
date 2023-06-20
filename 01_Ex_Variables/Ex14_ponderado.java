@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio14 {
+public class Ex14_ponderado{
     public static void main(String[]args){
         Scanner teclado = new Scanner(System.in);
 

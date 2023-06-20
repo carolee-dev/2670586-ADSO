@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio20 {
+public class Ex20_sumaDigits{
     public static void main(String[]args){
         Scanner entrada = new Scanner(System.in);
 

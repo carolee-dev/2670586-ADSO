@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio09 {
+public class Ex09_par_impar{
     public static void main(String[]args){
         Scanner teclado = new Scanner(System.in);
 
@@ -9,7 +9,7 @@ public class Ejercicio09 {
         System.out.println("Ingresa un número: ");
         num = teclado.nextInt();
 
-        if (num % 2 == 0){
+        if(num % 2 == 0){
             System.out.println("El número es par.");
         }
         else{

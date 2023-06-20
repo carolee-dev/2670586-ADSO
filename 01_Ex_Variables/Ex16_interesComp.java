@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Ejercicio16_interesComp {
+public class Ex16_interesComp{
     public static void main(String[]args){
         Scanner teclado = new Scanner(System.in);
 

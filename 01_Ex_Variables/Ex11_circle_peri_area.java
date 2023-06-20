@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Ejercicio11 {
+public class Ex11_circle_peri_area{
     public static void main(String[]args){
         Scanner entrada = new Scanner(System.in);
 
@@ -7,7 +7,7 @@ public class Ejercicio11 {
         double pi = 3.14159;
 
         System.out.println("Ingrese el radio del círculo: ");
-        rad = entrada.nextFloat();
+        rad = entrada.nextDouble();
 
         perimt = (2*pi*rad);
         area = pi*(rad*rad);

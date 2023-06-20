@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio13 {
+public class Ex13_convertirSegundos{
     public static void main(String[]args){
         Scanner entrada = new Scanner(System.in);
 
