@@ -6,14 +6,13 @@ public class Ex08_concat2textos{
 
         String nombre1, apellido1;
 
-        System.out.println("Por favor ingresa tu primer nombre: ");
+        System.out.print("-->Por favor ingresa tu primer nombre: ");
         nombre1 = entrada.next();
 
-        System.out.println("Por favor ingresa tu primer apellido: ");
+        System.out.print("-->Por favor ingresa tu primer apellido: ");
         apellido1 = entrada.next();
         
-        System.out.print("Su nombre es: "+nombre1+" "+apellido1);
-
+        System.out.println("-->Tu nombre es: "+nombre1+" "+apellido1);
 
     }
 }
