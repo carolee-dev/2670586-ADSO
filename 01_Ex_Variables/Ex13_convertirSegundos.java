@@ -4,20 +4,18 @@ public class Ex13_convertirSegundos{
     public static void main(String[]args){
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Ingrese los segundos que desea convertir: ");
-        int seg = entrada.nextInt();
+        int inputSegs, horas, tiempo, minutos, segundosOut;
 
-        int sobrante = 0; 
+        System.out.print("-->Ingrese los segundos que desea convertir: ");
+        inputSegs = entrada.nextInt();
 
-        int hr = seg/3600;
-        sobrante = seg - (hr*3600);
-        
-        int min = sobrante/60;
-        sobrante = sobrante - (min*60);
+        horas = inputSegs / 3600;
 
-        seg = sobrante/1;
+        minutos = (inputSegs - (horas*3600)) / 60;
 
-        System.out.println("Los "+seg+" segundos ingresados equivalen a "+hr+" horas "+min+" minutos y "+seg+" segundos.");
+        segundosOut = (inputSegs - ((horas*3600) + (minutos*60)));
+
+        System.out.println("-->Los segundos ingresados equivalen a: "+horas+" horas, "+minutos+" minutos y "+segundosOut+" segundos.");
 
     }
     

@@ -6,15 +6,15 @@ public class Ex12_calcRectangulo{
 
         float base, height, area;
 
-        System.out.println("Digite base del rectángulo: ");
+        System.out.print("-->Digite base del rectángulo: ");
         base = teclado.nextFloat();
 
-        System.out.println("Digite altura del rectángulo:");
+        System.out.print("-->Digite altura del rectángulo: ");
         height = teclado.nextFloat();
 
         area = base * height;
 
-        System.out.println("El área del rectángulo es: "+area+"²");
+        System.out.println("El área del rectángulo es de: "+area+"²");
 
     }
     
