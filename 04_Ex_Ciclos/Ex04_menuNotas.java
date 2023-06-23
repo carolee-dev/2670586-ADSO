@@ -22,7 +22,7 @@ public class Ex04_menuNotas{
                 float sumaNotas = 0;
                 int i = 1;
 
-                while (i <= cantidad_notas){
+                while(i <= cantidad_notas){
                     System.out.println("Ingrese cada nota: ");
                     float nota = lector.nextFloat();
                     sumaNotas = sumaNotas + nota;
