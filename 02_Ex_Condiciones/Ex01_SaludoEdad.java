@@ -18,5 +18,6 @@ public class Ex01_saludoEdad {
         }else{
             System.out.println("Entrada fuera de los rangos permitidos.");
         }
+        
     }
 }
