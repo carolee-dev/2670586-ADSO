@@ -13,16 +13,16 @@ public class Ex01_numRandom{
         num_user = lectura.nextInt();
 
         if(num_user >= 1 && num_user <= 6){
-            num_random = (int)(Math.random() * (max - min + 1) + min);
+            num_random = (int)(Math.random() * (max - min + 10000) + min);
             System.out.println("-->El número construído es: "+num_random);
             
             int producto = num_random * 2;
+
             System.out.println("-->Resultado producto: "+producto);
 
         }else{
-            System.out.println("-->Valor ingresado no válido. ");
+            System.out.println("-->Número no válido. ");
         }
-        
 
     }
 }
