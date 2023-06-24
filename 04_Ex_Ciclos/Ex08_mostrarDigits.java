@@ -6,19 +6,15 @@ public class Ex08_mostrarDigits{
 
         System.out.print("--> Ingrese un número de 6 dígitos: ");
         int numero = lector.nextInt();
-        
-        int digito1 = (numero % 1000000)/100000;
-        int digito2 = (numero % 100000)/10000;
-        int digito3 = (numero % 10000)/1000;
-        int digito4 = (numero % 1000)/100;
-        int digito5 = (numero % 100)/10;
-        int digito6 = (numero % 10);
 
         if(numero >= 0 && numero <= 999999){
-            
-            
 
-            // System.out.println("El dígito "+i+" es: "+digito);
+            for(int i = 1; i <= numero || numero != 0; i++){
+                numero = numero / 10;
+                System.out.println("--> El dígito "+i+" es: ");
+            }
+            
+    
 
         }else{
             System.out.println("--> Ingrese un número válido.");
