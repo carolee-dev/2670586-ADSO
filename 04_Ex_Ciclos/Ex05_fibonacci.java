@@ -6,31 +6,70 @@ public class Ex05_fibonacci{
         Scanner entrada = new Scanner(System.in);
 
         int numero = 0;
-        int fibo1 = 0;
-        int fibo2 = 1;
-        int conta = 1;
-        int fiboActual = 0;
-        
-        System.out.println("--> Ingrese un número para ver la sucesión Fibonacci: ");
+        int i = 0;
+        int a = 0;
+        int b = 1;
+        int c = 0;
+
+        System.out.print("--> (for) Ingrese un número para ver la sucesión Fibonacci: ");
         numero = entrada.nextInt();
 
-        while(conta <= numero){
-            if(conta == 1){
-                System.out.print(fibo1+" ");
+        for(i = 0; i < numero; i++){
+            if(i < (numero - 1)){
+                System.out.print(a+ ", ");
+                c = a + b;
+                a = b;
+                b = c;
+            }else{
+                System.out.print(a);
             }
-            if(conta == 2){
-                System.out.print(fibo2+" ");
-            }
-            if(conta > 2){
-                fiboActual = fibo1 + fibo2;
-                System.out.print(fiboActual+" ");
-                fibo1 = fibo2;
-                fibo2 = fiboActual;
-            }
-
-            conta = conta + 1;
         }
+        System.out.println("");
+
+        numero = 0;
+        i = 0;
+        a = 0;
+        b = 1;
+        c = 0;
+
+        System.out.print("--> (while) Ingrese un número para ver la sucesión Fibonacci: ");
+        numero = entrada.nextInt();
+
+        while(i < numero){
+            if(i < (numero - 1)){
+                System.out.print(a+ ", ");
+                c = a + b;
+                a = b;
+                b = c;
+            }else{
+                System.out.print(a);
+            }
+            i++;
+        }
+        System.out.println("");
+
+        numero = 0;
+        i = 0;
+        a = 0;
+        b = 1;
+        c = 0;
+
+        System.out.print("--> (do-while) Ingrese un número para ver la sucesión Fibonacci: ");
+        numero = entrada.nextInt();
+
+        do{
+            if(i < (numero - 1)){
+                System.out.print(a+ ", ");
+                c = a + b;
+                a = b;
+                b = c;
+            }else{
+                System.out.print(a);
+            }
+            i++;
+        }while(i < numero);
+
+        System.out.println("");
 
     }
-
 }

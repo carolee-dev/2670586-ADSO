@@ -9,7 +9,14 @@ public class Ex08_mostrarDigits{
 
         if(numero >= 0 && numero <= 999999){
             int digito = numero % 10;
+            int guardaMod = 1000000;
+            int guardaDiv;
 
+            while(numero < 0){
+                guardaMod = numero % guardaMod;
+                guardaDiv = guardaMod/10;
+            }            
+            
             for(int i = 1; i <= numero || numero != 0; i++){
                 numero = numero / 10;
                 System.out.println("--> El dígito "+i+" es: "+digito);
