@@ -16,7 +16,7 @@ public class Ex05_fibonacci{
 
         for(i = 0; i < numero; i++){
             if(i < (numero - 1)){
-                System.out.print(a+ ", ");
+                System.out.print(a+", ");
                 c = a + b;
                 a = b;
                 b = c;
