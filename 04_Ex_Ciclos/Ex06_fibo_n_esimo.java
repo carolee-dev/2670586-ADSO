@@ -29,7 +29,25 @@ public class Ex06_fibo_n_esimo{
             b = c;
         }
         System.out.print("--> El n-ésimo número Fibonacci es: "+a);
+        System.out.println("");
 
+        numero = 0;
+        i = 0;
+        a = 0;
+        b = 1;
+        c = 0;
+
+        System.out.print("--> Ingrese la posición del n-ésimo Fibonacci: ");
+        numero = leer.nextInt();
+
+        while(i < numero - 1){
+            c = a + b;
+            a = b;
+            b = c;
+
+            i++;
+        }
+        System.out.print("--> El n-ésimo número Fibonacci es: "+a);
         System.out.println("");
     }
 }
