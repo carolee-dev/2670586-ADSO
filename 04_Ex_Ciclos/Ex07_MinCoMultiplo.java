@@ -14,6 +14,7 @@ public class Ex07_MinCoMultiplo{
         System.out.print("--> Ingrese el tercer número: ");
         num3 = lector.nextInt();
 
+        //Primero encontrar el mayor de los 3 números ingresados.
         int numMayor = num1;
         if(num2 > numMayor){
             numMayor = num2;
@@ -22,6 +23,7 @@ public class Ex07_MinCoMultiplo{
             numMayor = num3;
         }
 
+        //Con el numMayor asignado a mcm, verifico si es divisible por los números ingresados. Si lo es, ese número es el MCM y se sale del bucle.
         int mcm = numMayor;
         while(numMayor != 0){
             if(mcm % num1 == 0 && mcm % num2 == 0 && mcm % num3 == 0){

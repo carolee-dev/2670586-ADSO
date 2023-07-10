@@ -4,25 +4,37 @@ public class Ex08_mostrarDigits{
     public static void main(String[]args){
         Scanner lector = new Scanner(System.in);
 
+        int numero = 0;
+
         System.out.print("--> Ingrese un número de 6 dígitos: ");
-        int numero = lector.nextInt();
+        numero = lector.nextInt();
+        System.out.println("------------------------------------");
 
         if(numero >= 0 && numero <= 999999){
-            int digito = numero % 10;
-            int guardaMod = 1000000;
-            int guardaDiv;
 
-            while(numero < 0){
-                guardaMod = numero % guardaMod;
-                guardaDiv = guardaMod/10;
-            }            
-            
-            for(int i = 1; i <= numero || numero != 0; i++){
+            int digito = 0;
+            int numInvertido = 0;
+            int contador = 0;
+
+            while(numero > 0){
+                digito = numero % 10;
                 numero = numero / 10;
-                System.out.println("--> El dígito "+i+" es: "+digito);
+                numInvertido = numInvertido * 10 + digito;
+                              
+                contador = contador + 1;
+            }
+            // System.out.println("--> Número invertido es: "+numInvertido);
+
+            contador = 0;
+            while(numInvertido > 0){
+                digito = numInvertido % 10;
+                numInvertido = numInvertido / 10;
+
+                contador ++;
+                
+                System.out.println("--> El dígito "+contador+" es: "+digito);
             }
                 
-
         }else{
             System.out.println("--> Ingrese un número válido.");
         }
