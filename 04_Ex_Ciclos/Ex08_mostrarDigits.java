@@ -10,12 +10,12 @@ public class Ex08_mostrarDigits{
         numero = lector.nextInt();
         System.out.println("------------------------------------");
 
+        // Bandera
         if(numero >= 0 && numero <= 999999){
-
+            // Bucle para separar número en orden máquina
             int digito = 0;
             int numInvertido = 0;
             int contador = 0;
-
             while(numero > 0){
                 digito = numero % 10;
                 numero = numero / 10;
@@ -25,6 +25,7 @@ public class Ex08_mostrarDigits{
             }
             // System.out.println("--> Número invertido es: "+numInvertido);
 
+            // Bucle para separar número "al derecho".
             contador = 0;
             while(numInvertido > 0){
                 digito = numInvertido % 10;
