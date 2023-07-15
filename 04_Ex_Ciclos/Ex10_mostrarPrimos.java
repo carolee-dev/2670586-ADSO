@@ -6,41 +6,29 @@ public class Ex10_mostrarPrimos{
 
         System.out.println("|---------------------------------------------|");
         System.out.print("--> Ingrese un número igual o menor a 11: ");
-        int N = lectura.nextInt();
+        int numIn = lectura.nextInt();
+
+        int x, num, contador;
         
-        if(N <= 0 || N > 11){
-            System.out.println("--> Ingrese un número válido. ");
-            return;
-        }
-
-        int numero = 2;
-        int cantiPrimos = 0;
-
-        System.out.println("Los números primos encontrados son: ");
-
-        while(cantiPrimos < N * N){
-            if(numPrimo(numero)){
-                System.out.println("["+numero+"]");
-                cantiPrimos = cantiPrimos + 1;
+        if(numIn >= 0 && numIn <= 11){
+            
+            for(num = 1; num <= numIn; num++){
+                x = 1;
+                contador = 0;
+                while(x <= num){
+                    if(num % x == 0){
+                        contador++;
+                    }
+                    x++;
+                }
+                if(contador == 2 && numIn > 1){
+                    System.out.println("["+num+"]");
+                }
             }
-            numero++;
+            System.out.println("|---------------------------------------------|");
+        
+        }else{
+            System.out.println("--> Ingrese un número válido.");
         }
-        System.out.println("|---------------------------------------------|");
-
-    }
-
-    public static boolean numPrimo(int numero){
-        if(numero <= 1){
-            return false;
-        }
-        int limite = (int) Math.sqrt(numero);
-
-        for(int i = 2; i <= limite; i++){
-            if(numero % i == 0){
-                return false;
-            }
-        }
-        return true;
-
     }
 }
