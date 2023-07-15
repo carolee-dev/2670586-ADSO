@@ -21,7 +21,7 @@ public class Ex10_mostrarPrimos{
                     }
                     x++;
                 }
-                if(contador == 2 && numIn > 1){
+                if(contador == 2){
                     System.out.println("["+num+"]");
                 }
             }
@@ -30,5 +30,6 @@ public class Ex10_mostrarPrimos{
         }else{
             System.out.println("--> Ingrese un número válido.");
         }
+        System.out.println();
     }
 }
