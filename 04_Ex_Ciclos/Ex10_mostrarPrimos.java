@@ -31,7 +31,7 @@ public class Ex10_mostrarPrimos{
                         i = i + 1;
                     }
                     if(esPrimo == 1){
-                        if(num <= 10){
+                        if(num < 10){
                             System.out.print("[00"+num+"]");
                         }else if(num < 100){
                             System.out.print("[0"+num+"]");

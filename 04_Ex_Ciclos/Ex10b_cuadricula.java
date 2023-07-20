@@ -16,6 +16,8 @@ public class Ex10b_cuadricula{
 				for(int columna = 1; columna <= N; columna++){
 					int R = fila * columna;
 					if(R < 10){
+						System.out.print("[00"+R+"]");
+					}else if(R < 100){
 						System.out.print("[0"+R+"]");
 					}else{
 						System.out.print("["+R+"]");
