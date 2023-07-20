@@ -7,14 +7,19 @@ public class Ex10b_cuadricula{
 
         System.out.println("|---------------------------------------------|");
 		System.out.print("--> Ingrese un número igual o menor a 11: ");
-		int numIn = teclado.nextInt();
+		int N = teclado.nextInt();
 
-		if(numIn >= 0 && numIn <= 11){
+		if(N >= 0 && N <= 11){
 
-			for(int fila = 1; fila <= numIn; fila++){
+			for(int fila = 1; fila <= N; fila++){
 				System.out.println();
-				for(int columna = 1; columna <= numIn; columna++){
-					System.out.print(" ["+(fila * columna)+"]");
+				for(int columna = 1; columna <= N; columna++){
+					int R = fila * columna;
+					if(R < 10){
+						System.out.print("[0"+R+"]");
+					}else{
+						System.out.print("["+R+"]");
+					}
 				}
 			}
 			System.out.println();
@@ -24,6 +29,5 @@ public class Ex10b_cuadricula{
             System.out.println("--> Ingrese un número válido.");
         }
 		System.out.println();	
-
 	}
 }

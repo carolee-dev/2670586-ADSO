@@ -6,28 +6,39 @@ public class Ex10_mostrarPrimos{
 
         System.out.println("|---------------------------------------------|");
         System.out.print("--> Ingrese un número igual o menor a 11: ");
-        int numIn = lectura.nextInt();
-
-        int x, num, divisor;
+        int N = lectura.nextInt();
         
-        if(numIn >= 0 && numIn <= 11){
+        if(N >= 0 && N <= 11){
 
-            for(int fila = 1; fila <= numIn; fila++){
+            int num, i, esPrimo, contador;
+
+            for(int fila = 1; fila <= N; fila++){
                 System.out.println();
-                for(num = 1; num <= numIn; num++){
-                    x = 1;
-                    divisor = 0;
-                    while(x <= num){
-                        if(num % x == 0){
-                            divisor++;
+                for(num = 1; num <= N; num++){
+
+                    num = 2;
+                    contador = 0;
+                    while(contador < N){
+                        esPrimo = 1;
+                        i = 2;
+
+                        while(i <= num / 2){
+                            if(num % i == 0){
+                                esPrimo = 0;
+                                i = num;
+                            }
+                            i = i + 1;
                         }
-                        x++;
+                        if(esPrimo == 1){
+                            System.out.print("["+num+"]");
+                            contador = contador + 1;
+                        }
+                        num = num + 1;
                     }
-                    if(divisor == 2){
-                        System.out.println("--> "+num+" es primo. ");
-                    }
+                    
                 }
             }
+            System.out.println();
             System.out.println("|---------------------------------------------|");
         
         }else{
