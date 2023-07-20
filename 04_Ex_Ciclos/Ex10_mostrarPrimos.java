@@ -8,21 +8,24 @@ public class Ex10_mostrarPrimos{
         System.out.print("--> Ingrese un número igual o menor a 11: ");
         int numIn = lectura.nextInt();
 
-        int x, num, contador;
+        int x, num, divisor;
         
         if(numIn >= 0 && numIn <= 11){
-            
-            for(num = 1; num <= numIn; num++){
-                x = 1;
-                contador = 0;
-                while(x <= num){
-                    if(num % x == 0){
-                        contador++;
+
+            for(int fila = 1; fila <= numIn; fila++){
+                System.out.println();
+                for(num = 1; num <= numIn; num++){
+                    x = 1;
+                    divisor = 0;
+                    while(x <= num){
+                        if(num % x == 0){
+                            divisor++;
+                        }
+                        x++;
                     }
-                    x++;
-                }
-                if(contador == 2){
-                    System.out.println("["+num+"]");
+                    if(divisor == 2){
+                        System.out.println("--> "+num+" es primo. ");
+                    }
                 }
             }
             System.out.println("|---------------------------------------------|");
