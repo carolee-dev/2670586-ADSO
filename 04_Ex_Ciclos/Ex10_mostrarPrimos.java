@@ -10,27 +10,27 @@ public class Ex10_mostrarPrimos{
         
         if(N >= 0 && N <= 11){
 
-            int num, i, esPrimo, contador, fila, columna;
+            int num, i, esPrimo, contaPrimos, fila, columna;
 
             for(fila = 1; fila <= N; fila++){
                 System.out.println();
 
                 num = 2;
-                contador = 0;
+                contaPrimos = 0;
                 fila = 1;
                 columna = 1;
-                while(contador < N * N){
+                while(contaPrimos < N * N){
                     esPrimo = 1;
                     i = 2;
 
-                    while(i <= num / 2){
+                    while(i <= num / 2){ // Acá verifico si num es primo. Si algún número divide a num sin dejar residuo.
                         if(num % i == 0){
-                            esPrimo = 0;
-                            i = num;
+                            esPrimo = 0; // Variable en 0 para indicar que no es primo
+                            i = num; // Para salir del ciclo.
                         }
                         i = i + 1;
                     }
-                    if(esPrimo == 1){
+                    if(esPrimo == 1){ //Si no se encuentra ningún divisor, esPrimo sigue siendo 1, lo que indica que num es primo.
                         if(num < 10){
                             System.out.print("[00"+num+"]");
                         }else if(num < 100){
@@ -38,9 +38,9 @@ public class Ex10_mostrarPrimos{
                         }else{
                             System.out.print("["+num+"]");
                         }
-                        contador = contador + 1;
+                        contaPrimos = contaPrimos + 1;
 
-                        if(contador % N == 0){
+                        if(contaPrimos % N == 0){
                             fila = fila + 1;
                             columna = 1;
                             System.out.println("");

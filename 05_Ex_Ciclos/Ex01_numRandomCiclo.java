@@ -15,14 +15,25 @@ public class Ex01_numRandomCiclo{
         if(num_user >= 1 && num_user <= 6){
 
             for(int i = 1; i <= num_user; i++){
-                num_random = (int)(Math.random() * (max - min + (i * 1000)) + min);
+                num_random = (int)(Math.random() * (max - min + (i * 100000)) + min);
+            }
+            if(num_user == 1 && num_random < 9){
+                System.out.println("-->El número construído es: "+num_random);
+        
+                int producto = num_random * 2;
+
+                System.out.println("-->Resultado producto: "+producto);
+                System.out.println("");
+            }
+            if(num_user == 2 && num_random < 99){
+                System.out.println("-->El número construído es: "+num_random);
+        
+                int producto = num_random * 2;
+
+                System.out.println("-->Resultado producto: "+producto);
+                System.out.println("");
             }
     
-            System.out.println("-->El número construído es: "+num_random);
-            
-            int producto = num_random * 2;
-
-            System.out.println("-->Resultado producto: "+producto);
 
         }else{
             System.out.println("-->Número no válido. ");
