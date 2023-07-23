@@ -11,7 +11,7 @@ public class Ex01_ArrayImpar{
 
         // Ciclo para llenar el arreglo
         for(int i = 0; i < arr.length; i++){
-            arr[i] = 2 * num + 1; // Operación matemática para generar números impares. Cero NO es par.
+            arr[i] = 2 * i + 1; // Operación matemática para generar números impares. Cero NO es par.
         }
 
         // Ciclo para imprimir el arreglo
