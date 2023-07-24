@@ -1,69 +1,35 @@
 import java.util.Scanner;
 
-public class Ex01_numRandom{
-    public static void main(String[] args){
-        Scanner lectura = new Scanner(System.in);
+public class Ex01_numRandom {
 
-        int num_user = 1; 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int num_user;
+        int min, max;
         int num_random = 0;
+        int producto;
+        
+        System.out.print("Ingresa un número entero entre 1 y 6: ");
+        num_user = scanner.nextInt();
 
-        System.out.print("-->Ingrese un número entero entre 1 y 6: ");
-        num_user = lectura.nextInt();
+        min = (int) Math.pow(10, num_user - 1);
+        max = (int) Math.pow(10, num_user) - 1;
 
         if(num_user >= 1 && num_user <= 6){
 
-            if(num_user == 1){
-                num_random = (int)(Math.random() * 10); // Se multiplica para limitarlo
-                System.out.println("-->El número construído es: "+num_random);
-                
-                int producto = num_random * 2;
-
-                System.out.println("-->Resultado producto: "+producto);
+            for (int i = 0; i < num_user; i++) {
+                num_random = (int) (Math.random() * (max - min + 1)) + min;
             }
-            if(num_user == 2){
-                num_random = (int)(Math.random() * 100); // Se multiplica para limitarlo
-                System.out.println("-->El número construído es: "+num_random);
-                
-                int producto = num_random * 2;
+            System.out.println("--> El número construído es: "+num_random);
 
-                System.out.println("-->Resultado producto: "+producto);
-            }
-            if(num_user == 3){
-                num_random = (int)(Math.random() * 1000); // Se multiplica para limitarlo
-                System.out.println("-->El número construído es: "+num_random);
-                
-                int producto = num_random * 2;
+            producto = num_random * 2;   
 
-                System.out.println("-->Resultado producto: "+producto);
-            }
-            if(num_user == 4){
-                num_random = (int)(Math.random() * 10000); // Se multiplica para limitarlo
-                System.out.println("-->El número construído es: "+num_random);
-                
-                int producto = num_random * 2;
-
-                System.out.println("-->Resultado producto: "+producto);
-            }
-            if(num_user == 5){
-                num_random = (int)(Math.random() * 100000); // Se multiplica para limitarlo
-                System.out.println("-->El número construído es: "+num_random);
-                
-                int producto = num_random * 2;
-
-                System.out.println("-->Resultado producto: "+producto);
-            }
-            if(num_user == 6){
-                num_random = (int)(Math.random() * 1000000); // Se multiplica para limitarlo
-                System.out.println("-->El número construído es: "+num_random);
-                
-                int producto = num_random * 2;
-
-                System.out.println("-->Resultado producto: "+producto);
-            }
+            System.out.println("--> Resultado producto: "+producto);
+            System.out.println("");
 
         }else{
-            System.out.println("-->Número no válido. ");
+            System.out.println("--> Número no válido. ");
         }
-
     }
 }
