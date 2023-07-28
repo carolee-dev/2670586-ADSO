@@ -7,11 +7,11 @@ public class Ejplo02_Arreglos{
         // El sistema debe llenar de forma automática el arreglo con números pares.
         // Al final el sistema muestra el contenido del arreglo.
         
-        System.out.print("--> Ingrese un número: ");
-        int ene = lectura.nextInt();
+        System.out.print("-->Ingrese un número: ");
+        int N = lectura.nextInt();
 
         // Crear arreglo
-        int arr [] = new int [ene];
+        int arr [] = new int [N];
 
         // Ciclo para llenar el arreglo
         for(int i = 0; i < arr.length; i++){
