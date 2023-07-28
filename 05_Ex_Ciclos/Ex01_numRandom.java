@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ex01_numRandom {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         int num_user;
         int min, max;
@@ -11,7 +11,7 @@ public class Ex01_numRandom {
         int producto;
         
         System.out.print("Ingresa un número entero entre 1 y 6: ");
-        num_user = scanner.nextInt();
+        num_user = teclado.nextInt();
 
         min = (int) Math.pow(10, num_user - 1);
         max = (int) Math.pow(10, num_user) - 1;
