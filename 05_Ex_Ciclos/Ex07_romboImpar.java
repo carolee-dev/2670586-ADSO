@@ -10,27 +10,37 @@ public class Ex07_romboImpar{
         
         // Hacer bandera de impar.
         if(N % 2 == 1){
-            int alto = 0;
-            int ancho = 0;
-            int espacio = 0;
-            int equis = 0;
 
-            
-            for(alto = 1; alto <= N; alto++){
-                //System.out.print(alto);
-                for(ancho = 1; ancho <= N; ancho++){
-                    //System.out.print(ancho);
-                    for(espacio = 1; espacio <= ancho-1; espacio++){
-                        System.out.print("-");
-                    }
-                    for(equis = 1; equis <= ancho; equis++){
-                        System.out.print("x");
-                    }
+            // Parte superior del rombo
+            for(int filas_sup = 1; filas_sup <= N; filas_sup += 2){
+                int espacios = (N - filas_sup) / 2;
+
+                // Mostrar espacios parte superior
+                for(int i = 0; i < espacios; i++){
+                    System.out.print("-");
                 }
-                
-            System.out.println(" ");
-            }
+                // Mostrar equis parte superior
+                for(int i = 0; i < filas_sup; i++){
+                    System.out.print("x");
+                }
+                System.out.println();
+            }               
             
+            // Parte inferior
+            for(int filas_inf = N - 2; filas_inf >= 1; filas_inf -= 2){
+                int espacios_inf = (N - filas_inf) / 2;
+
+                // Mostrar espacios parte inferior
+                for(int j = 0; j < espacios_inf; j++){
+                    System.out.print("-");
+                }
+                // Mostrar equis parte inferior
+                for(int j = 0; j < filas_inf; j++){
+                    System.out.print("x");
+                }
+                System.out.println();
+            }
+            System.out.println("");
 
         }else{
             System.out.println("--> Número debe ser impar. ");
