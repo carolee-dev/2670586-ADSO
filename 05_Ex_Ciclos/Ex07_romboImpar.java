@@ -8,7 +8,7 @@ public class Ex07_romboImpar{
         System.out.print("--> Ingrese un número entero impar: ");
         int N = lectura.nextInt();
         
-        // Hacer bandera de impar.
+        // Bandera en impar.
         if(N % 2 == 1){
 
             // Parte superior del rombo
@@ -40,7 +40,6 @@ public class Ex07_romboImpar{
                 }
                 System.out.println();
             }
-            System.out.println("");
 
         }else{
             System.out.println("--> Número debe ser impar. ");
