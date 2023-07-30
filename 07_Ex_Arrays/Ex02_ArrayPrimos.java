@@ -24,7 +24,7 @@ public class Ex02_ArrayPrimos{
                 }
             }
             // Si es primo
-            if(divisores == 2){
+            if(divisores == 2){ // Si tiene 2 divisores, es primo.
                 // Se almacena el primo en el arreglo
                 arreglo [contaPrimos] = primo;
                 // Aumentamos contaPrimos
