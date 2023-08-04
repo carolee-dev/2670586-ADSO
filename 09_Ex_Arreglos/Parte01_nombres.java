@@ -12,27 +12,28 @@ public class Parte01_nombres{
 
         // Llenar del arreglo:
         int i = 0;
-        for(i = 0; i < N; i++){ // Mejor no tocar el cero.
+        for(i = 0; i < nombres.length; i++){ // Mejor no tocar el cero.
             System.out.print("--> Ingrese nombre del humano "+(i+1)+": ");
             nombres[i] = teclado.next();
         }
         
         // Mostrar datos del arreglo:
-        for(i = 0; i < N; i++){
-            System.out.println("--> Humano "+(i+1)+" se llama "+nombres[i]) ;
+        for(i = 0; i < nombres.length; i++){
+            System.out.println("--> Humano "+(i+1)+" se llama "+nombres[i]);
         }
         System.out.println();
 
-        // Mostrar posición del nombre, ingresando nombre
+        // Ingresar nombre para encontrar index del nombre
+        String nombreBuscado = "";
         System.out.print("--> Ingrese un nombre para saber su posición: ");
-        String typed_name = teclado.next();
+        nombreBuscado = teclado.next();
 
-        if(typed_name.equals(nombres[i])){
-            System.out.print(" "+typed_name+" está en posición "+i);
+        // Buscar nombre en el arreglo
+        for(i = 0; i < nombres.length; i++){
+            if(nombreBuscado.equalsIgnoreCase(nombres[i])){
+                System.out.println("--> El humano existe en el index "+(i+1));
+            }
         }
-
-        
-
 
     }
     
