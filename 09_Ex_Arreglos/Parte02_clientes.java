@@ -14,11 +14,11 @@ public class Parte02_clientes{
             System.out.println("");
             System.out.println("                           Memoria disponible: " + (100 - cantidadClientes) + " Registros.");
             System.out.println("");
-            System.out.println("1. Registrar cliente");
-            System.out.println("2. Ver lista de clientes ");
-            System.out.println("3. Editar cliente ");
-            System.out.println("4. Eliminar cliente ");
-            System.out.println("5. Salir");
+            System.out.println(" 1. Registrar cliente");
+            System.out.println(" 2. Ver lista de clientes ");
+            System.out.println(" 3. Editar cliente ");
+            System.out.println(" 4. Eliminar cliente ");
+            System.out.println(" 5. Salir");
             System.out.println("");
             System.out.println("------------------------------------------------------------*");
             System.out.println("");
@@ -60,7 +60,7 @@ public class Parte02_clientes{
                     if (cantidadClientes > 0) {
                         System.out.println("Lista de clientes: ");
                         for (int i = 0; i < cantidadClientes; i++) {
-                            System.out.println((i + 1) + " : " + clientes[i]);
+                            System.out.println(" " + (i + 1) + ": " + clientes[i]);
                         }
                         System.out.println("");
                     } else {
