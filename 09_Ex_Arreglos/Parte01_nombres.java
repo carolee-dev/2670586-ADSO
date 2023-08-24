@@ -1,10 +1,9 @@
-
 import java.util.Scanner;
 public class Parte01_nombres{
     public static void main(String[] args){
         Scanner teclado = new Scanner(System.in);
 
-        System.out.print("--> Ingrese un número: ");
+        System.out.print("--> Ingrese un número para definir la cantidad de nombres: ");
         int N = teclado.nextInt();
 
         // Crear arreglo vacío
@@ -28,7 +27,7 @@ public class Parte01_nombres{
         System.out.print("--> Ingrese un nombre para saber su posición: ");
         nombreBuscado = teclado.next();
 
-        // Buscar nombre en el arreglo
+        // Buscar nombre en el arreglo y mostrar
         for(i = 0; i < nombres.length; i++){
             if(nombreBuscado.equalsIgnoreCase(nombres[i])){
                 System.out.println("--> El humano existe en el index "+(i+1));
