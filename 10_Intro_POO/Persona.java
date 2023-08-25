@@ -1,11 +1,11 @@
 public class Persona {
 
-    // Atributos (Características) Ideal que sean private
+    // Atributos o Características del tipo de dato a crear. sIdeal que sean private.
     int cedula;
     String nombres;
-    String apellidos;
+    private String apellidos;
     int edad;
-    int estatura;
+    private int estatura;
     double peso;
 
     // Se crea un Getter y un Setter para cada atributo.
