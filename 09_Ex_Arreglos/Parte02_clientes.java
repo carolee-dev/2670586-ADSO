@@ -5,11 +5,14 @@ public class Parte02_clientes{
 
         // Crear arreglo vacío con 100 posiciones tipo String
         String clientes [] = new String [100];
-        int cantidadClientes = 0; // Crear variable para +/- cantidad de clientes
+
+        // Crear variable para +/- cantidad de clientes
+        int cantidadClientes = 0; 
+
         boolean salir = false;
         int opcion = 0;
 
-        do {
+        do { // Mostrar menú:
             System.out.println("------------------------------------------------------------*");
             System.out.println("");
             System.out.println("                           Memoria disponible: " + (100 - cantidadClientes) + " Registros.");
@@ -34,7 +37,7 @@ public class Parte02_clientes{
                         System.out.print("Ingrese nombre completo del cliente: ");
                         String nombre = teclado.nextLine();
 
-                        // Comprobar si el cliente ya existe
+                        // Guardas para comprobar si el cliente ya existe
                         boolean clienteExiste = false;
                         for (int i = 0; i < cantidadClientes; i++) {
                             if (clientes[i].equalsIgnoreCase(nombre)) {
@@ -42,46 +45,42 @@ public class Parte02_clientes{
                                 break;
                             }
                         }
-                    
-                        if (!clienteExiste) {
+                        // Si después de buscar en el ciclo y clienteExiste sigue siendo false, significa que no se encontró ningún cliente con el mismo nombre en el array 'clientes[i]'. Como es false, el programa procede a agregar el nuevo cliente a la siguiente posición disponible en el array.'
+                        if (clienteExiste == false) { 
                             clientes[cantidadClientes] = nombre;
                             cantidadClientes++;
                             System.out.println("Registro de cliente exitoso.");
-                        } else {
+                        } else { // Si clienteExiste es true, se imprime:
                             System.out.println("El cliente ya existe. ");
                         }
-                    } else {
-                        System.out.println("Memoria llena. No se pueden agrega más clientes. ");
                     }
                     break;
 
                 case 2:
-                    // Ver lista de clientes:
-                    if (cantidadClientes > 0) {
-                        System.out.println("Lista de clientes: ");
-                        for (int i = 0; i < cantidadClientes; i++) {
-                            System.out.println(" " + (i + 1) + ": " + clientes[i]);
-                        }
-                        System.out.println("");
-                    } else {
-                        System.out.println("No hay clientes registrados. ");
+                    // Mostrar lista de clientes:
+                    System.out.println("Lista de clientes: ");
+                    for (int i = 0; i < cantidadClientes; i++) {
+                        System.out.println(" " + (i + 1) + ": " + clientes[i]);
                     }
+                    System.out.println("");
                     break;
 
-                case 3:
-                    // Editar cliente
+                case 3: // Editar cliente
+                    // Solicitar el input del nombre a editar y guardar en nueva variable:
                     System.out.print("Ingrese el nombre del cliente a editar: ");
                     String nombreEditar = teclado.nextLine();
-                    int posicionEditar = -1;
 
-                    // Buscar cliente:
+                    
+                    int posicionEditar = -1; // Si se mantiene en -1, significa que no se encontró el cliente.
+                    // Recorrer array para buscar cliente:
                     for (int i = 0; i < cantidadClientes; i++) {
+                        // Se verifica si el nombre del cliente en la posición i del arreglo clientes es igual al nombre que el usuario ingresó en nombreEditar:
                         if (clientes[i].equalsIgnoreCase(nombreEditar)){
-                            posicionEditar = i;
+                            posicionEditar = i; // Acá está la posición encontrada del cliente a editar.
                             break;
                         }
                     }
-                    if (posicionEditar != -1) {
+                    if (posicionEditar != -1) { // Si posicionEditar no es -1, se solicita al usuario que ingrese el nuevo nombre para el cliente:
                         System.out.print("Ingrese el nuevo nombre: ");
                         String nuevoNombre = teclado.nextLine();
                         clientes[posicionEditar] = nuevoNombre;
