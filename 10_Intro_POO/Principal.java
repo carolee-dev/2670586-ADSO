@@ -6,14 +6,19 @@ public class Principal {
         // Creación de la instancia:
         // usuario es un objeto (con atributos y métodos). No es una variable
         // propiamente.
-        Persona persona_01 = new Persona(123456, "Carolina", "Lee", 41, 165, 55);
-        Persona persona_02 = new Persona(460481, "Daniel", "García", 36, 177, 73);
+        Persona persona_01 = new Persona(460481, "Carolina", "Lee", 41, 165, 55); 
+        Persona persona_02 = new Persona(142046, "Daniel", "García", 36, 177, 73);
+        // persona_01 y persona_02 son objetos de tipo/clase Persona.
+        // new Persona es el constructor, es la instancia.
 
         persona_01.imprimirEstado();
         persona_02.imprimirEstado();
 
         persona_01.actividadFisica(80);
         persona_02.actividadFisica(30);
+
+        persona_01.aumentarPeso(2500);
+        persona_02.aumentarPeso(3000);
 
         persona_01.imprimirEstado();
         persona_02.imprimirEstado();

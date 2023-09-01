@@ -18,7 +18,7 @@ public class Persona {
 
     // Método Constructor: para inicializar las variables y nunca retorna datos:
     public Persona(int dato1, String dato2, String dato3, int dato4, int dato5, double dato6) {
-        cedula = dato1;
+        this.cedula = dato1; // this. para volver global a la variable
         nombres = dato2;
         apellidos = dato3;
         edad = dato4;
@@ -89,6 +89,7 @@ public class Persona {
         System.out.println("|-----------------------------|");
     }
 
+    // Métodos creados para la app fitness:
     public void actividadFisica(int minutos) {
         peso = peso - ((peso * 0.00005) * minutos);
     }
