@@ -166,7 +166,7 @@ public class Principal {
                 System.out.print("--> Ingrese número ID del perro: ");
                 int numeroID = entrada_numero.nextInt();
 
-                // Buscar si existe
+                // Buscar si existe con un 'for' que recorra el arreglo
                 int perroEncontrado = -1;
                 for (int i = 0; i < listaPerritos.length; i++) {
                     if (listaPerritos[i] != null && listaPerritos[i].getNumeroID() == numeroID) {
@@ -288,7 +288,7 @@ public class Principal {
 
             }
 
-            if (opcion == 11) {
+            if (opcion == 11) { // Salir del programa
                 System.out.println("*------------------------------------*");
                 System.out.println(" --> Gracias por usar el programa <-- ");
                 System.out.println("       <^..^>  A D I O S  <^..^>      ");
