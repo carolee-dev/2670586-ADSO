@@ -112,11 +112,11 @@ public class CajeroElectronico {
     }
 
     // Otros métodos a crear para la aplicación:
-        // abastecerCajero(...) 
-        // verHistorialCajero(...)
+        // abastecerCajero(...) OK
+        // verHistorialCajero(...) OK
         // consignarDineroTarjeta(...)
         // retirarDineroTarjeta(...)
-        // consultarSaldoTarjeta(...)
+        // consultarSaldoTarjeta(...) 
         // cambiarClaveTarjeta(...)
         // bloquearCajero(...) --> con boolean
 
@@ -136,8 +136,12 @@ public class CajeroElectronico {
         System.out.println(" usuarioAdmin = "+usuarioAdmin);
         System.out.println(" claveAdmin = "+claveAdmin);
 
+        System.out.println(" HISTORIAL TRANSACCIONES ");
         for (int i = 0; i < listaTransacciones.length; i++) {
-            System.out.println(" Historial Transacciones = "+listaTransacciones[i]);
+            if (listaTransacciones[i] != null) {
+                System.out.println("   => "+listaTransacciones[i]);
+            }
+            
         }
 
         System.out.println(" ------------------------------ ");
@@ -192,15 +196,71 @@ public class CajeroElectronico {
         }
 
     }
+        // El método va a recibir dos parametros:
+    public void verHistorialCajero(String user, String password) {
 
-    public void consignarDineroTarjeta() {
-        
+        if (user.equals(usuarioAdmin) && password.equals(claveAdmin)) {
 
+            registrarTransaccion("HISTORIAL", "0000 0000 0000 0000", 0, "OK");
+            
+            System.out.println("--------------------------------");
+            System.out.println("* HISTORIAL CAJERO ELECTRÓNICO *");
+            System.out.println("--------------------------------");
+
+            for (int i=0; i < listaTransacciones.length; i++) {
+
+                if (listaTransacciones[i] != null) {
+                    System.out.println(listaTransacciones[i]);
+                }
+
+            }
+            
+        }else{
+            System.out.println(" ===> ACCESO DENEGADO <===");
+            registrarTransaccion("HISTORIAL", "0000 0000 0000 0000", 0, "ERROR");
+        }
     }
 
+    public void consignarDineroTarjeta(TarjetaDebito tarjeta, String clave, int billete_10, int billete_20, int billete_50, int billete_100) {
+        int monto = (10000*billete_10) + (20000*billete_20) + (50000*billete_50) + (100000*billete_100);
 
+        // Validar clave
+        if(tarjeta.validarClave(clave)){
+            // Validar estado de la tarjeta que sea ACTIVA
+            if(tarjeta.validarEstadoActiva()){
+                // Validadr que el monto ingresado sea mayor a 0
+                if(monto > 0){
+                    // Validar que el dinero ingresado no supere el tope del cajero
+                    if ((dineroDisponible + monto) <= capacidadTotal) {
+                        // Aumentar saldo de la tarjeta
+                        tarjeta.aumentarSaldo(monto, clave);
 
+                        // Aumentar el saldo del cajero y cantidades de billetes
+                        dineroDisponible += monto;
+                        this.billete_10 += billete_10;
+                        this.billete_20 += billete_20;
+                        this.billete_50 += billete_50;
+                        this.billete_100 += billete_100;
 
-
+                        // Registrar la transacción
+                        System.out.println("  TRANSACCIÓN EXITOSA - CONSIGNAR DINERO ");
+                        registrarTransaccion("CONSIGNACIÓN", tarjeta.getNumeroTarjeta(), monto, "OK");
+                    }else{
+                        System.out.println("  ERROR MONTO SUPERIOR - CONSIGNAR DINERO ");
+                        registrarTransaccion("CONSIGNACIÓN", tarjeta.getNumeroTarjeta(), monto, "ERROR MONTO SUPERIOR");
+                    }
+                }else{
+                    System.out.println("  ERROR MONTO INFERIOR - CONSIGNAR DINERO ");
+                    registrarTransaccion("CONSIGNACIÓN", tarjeta.getNumeroTarjeta(), monto, "ERROR MONTO INFERIOR");
+                }
+            }else{
+                System.out.println("  ERROR ESTADO - CONSIGNAR DINERO ");
+                registrarTransaccion("CONSIGNACIÓN", tarjeta.getNumeroTarjeta(), monto, "ERROR ESTADO");
+            }
+        }else{
+            System.out.println("  ERROR PASSWORD - CONSIGNAR DINERO ");
+            registrarTransaccion("CONSIGNACIÓN", tarjeta.getNumeroTarjeta(), monto, "ERROR PASSWORD");
+        }    
+    }
 
 }
