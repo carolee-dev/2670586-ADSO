@@ -8,18 +8,18 @@ public class Principal {
         CajeroElectronico cajero_20 = new CajeroElectronico (150000000, "Oscar Bank", "adso54321", "54321");
         cajero_20.imprimirDetalle();
 
-        TarjetaDebito tarjeta_01 = new TarjetaDebito("Primera Zuluaga", "0001 1234 1234", "Oscar Bank", 3900000, 500000, "1010", "Estado", "ultimasTransacciones");
+        boolean estado = true;
+        TarjetaDebito tarjeta_01 = new TarjetaDebito("Primera Zuluaga", "0001 1234 1234", "Oscar Bank", 3900000, 500000, "1010", estado);
         tarjeta_01.imprimirDetalleTarjeta();
-        TarjetaDebito tarjeta_02 = new TarjetaDebito("Segundo Perez", "0002 1234 1234", "Banco Mundo", 8000, 500000, "2020", "Estado", "ultimasTransacciones");
+        TarjetaDebito tarjeta_02 = new TarjetaDebito("Segundo Perez", "0002 1234 1234", "Banco Mundo", 8000, 500000, "2020", estado);
         tarjeta_02.imprimirDetalleTarjeta();
-        TarjetaDebito tarjeta_03 = new TarjetaDebito("Tercero López", "0003 1234 1234", "Banco Mundo", 1700000, 500000, "3030", "Estado", "ultimasTransacciones");
-        TarjetaDebito tarjeta_04 = new TarjetaDebito("Cuarto Jaramillo", "0004 1234 1234", "Oscar Bank", 6000, 500000, "4040", "Estado", "ultimasTransacciones");
-        TarjetaDebito tarjeta_05 = new TarjetaDebito("Quinto Tobón", "0005 1234 1234", "Banco Mundo", 1500000, 500000, "5050", "Estado", "ultimasTransacciones");
+        TarjetaDebito tarjeta_03 = new TarjetaDebito("Tercero López", "0003 1234 1234", "Banco Mundo", 1700000, 500000, "3030", estado);
+        TarjetaDebito tarjeta_04 = new TarjetaDebito("Cuarto Jaramillo", "0004 1234 1234", "Oscar Bank", 6000, 500000, "4040", estado);
+        TarjetaDebito tarjeta_05 = new TarjetaDebito("Quinto Tobón", "0005 1234 1234", "Banco Mundo", 1500000, 500000, "5050", estado);
 
-        cajero_20.abastecerCajero(1000, 1000, 500, 500);
-        cajero_20.abastecerCajero(1000, 1000, 500, 5000);
-        
-        cajero_20.imprimirDetalle();
+        // cajero_20.abastecerCajero(1000, 1000, 500, 500);
+        // cajero_20.abastecerCajero(1000, 1000, 500, 5000);
+        // cajero_20.imprimirDetalle();
 
         
 

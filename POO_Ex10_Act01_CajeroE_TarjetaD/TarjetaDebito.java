@@ -7,11 +7,11 @@ public class TarjetaDebito {
     int montoEnTarjeta;
     int montoTopeRetiro;
     String clave;
-    String estado; // ACTIVA - BLOQUEADA - SUSPENDIDA
+    boolean estado; // ACTIVA - BLOQUEADA - SUSPENDIDA
     String ultimasTransacciones[]; // (fecha-tipoTransaccion-monto-estado)
 
     // Método Constructor para inicializar las variables:
-    public TarjetaDebito(String nombrePropietario, String numeroTarjeta, String nombreBanco, int montoEnTarjeta, int montoTopeRetiro, String clave, String estado) {
+    public TarjetaDebito(String nombrePropietario, String numeroTarjeta, String nombreBanco, int montoEnTarjeta, int montoTopeRetiro, String clave, boolean estado) {
         this.nombrePropietario = nombrePropietario;
         this.numeroTarjeta = numeroTarjeta;
         this.nombreBanco = nombreBanco;
@@ -19,8 +19,7 @@ public class TarjetaDebito {
         this.montoTopeRetiro = montoTopeRetiro;
         this.clave = clave;
         this.estado = estado;
-
-        ultimasTransacciones = new String[5];
+        this.ultimasTransacciones = new String[5];
     }
 
     // Método Getter para extraer los valores:
@@ -42,7 +41,7 @@ public class TarjetaDebito {
     public String getClave() {
         return clave;
     }
-    public String getEstado() {
+    public boolean getEstado() {
         return estado;
     }
     public String [] getUltimasTransacciones() {
@@ -69,7 +68,7 @@ public class TarjetaDebito {
     public void setClave (String dato) {
         clave = dato;
     }
-    public void setEstado (String dato) {
+    public void setEstado (boolean dato) {
         estado = dato;
     }
     public void setUltimasTransacciones (String[] dato) {
@@ -79,6 +78,7 @@ public class TarjetaDebito {
     // Otros métodos a crear para la aplicación:
         // disminuirSaldo(...)
         // aumentarSaldo(...)
+
 
     // Para ver que esté imprimiendo bien.
     public void imprimirDetalleTarjeta() {
@@ -91,10 +91,10 @@ public class TarjetaDebito {
         System.out.println(" montoTopeRetiro = " +montoTopeRetiro);
         System.out.println(" clave = " +clave);
 
-        if (montoEnTarjeta > 5000) {
-            System.out.println(" Estado: Tarjeta Activa");
+        if (montoEnTarjeta > 10000) {
+            System.out.println(" Estado: Tarjeta Activa ");
         } else {
-            System.out.println(" Estado: Fondos Insuficientes");
+            System.out.println(" Estado: Fondos Insuficientes ");
         }
 
         for (int i = 0; i < ultimasTransacciones.length; i++) {
