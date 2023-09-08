@@ -10,12 +10,12 @@ public class CajeroElectronico {
     int billete_50;
     int billete_100;
     String nombreBanco;
-    String listaTransacciones[]; // (fecha-tipoTransaccion-monto-estado)
     String usuarioAdmin;
     String claveAdmin;
+    String listaTransacciones[]; // (fecha-tipoTransaccion-monto-estado)
 
     // Método CONSTRUCTOR para inicializar las variables: ESTE RECIBE 9 DATOS
-    public CajeroElectronico (int capacidadTotal, int dineroDisponible, int billete_10, int billete_20, int billete_50, int billete_100, String nombreBanco, String usuarioAdmin, String claveAdmin) {
+    public CajeroElectronico(int capacidadTotal, int dineroDisponible, int billete_10, int billete_20, int billete_50, int billete_100, String nombreBanco, String usuarioAdmin, String claveAdmin) {
         this.capacidadTotal = capacidadTotal;
         this.dineroDisponible = dineroDisponible;
         this.billete_10 = billete_10;
@@ -26,7 +26,7 @@ public class CajeroElectronico {
         this.usuarioAdmin = usuarioAdmin;
         this.claveAdmin = claveAdmin;
 
-        listaTransacciones = new String [20];
+        listaTransacciones = new String[20];
     }
 
     // Otro método CONSTRUCTOR para inicializar las variables: ESTE RECIBE 4 DATOS
@@ -68,14 +68,14 @@ public class CajeroElectronico {
     public String getNombreBanco () {
         return nombreBanco;
     }
-    public String [] getListaTransacciones() {
-        return listaTransacciones;
-    }
     public String getUsuarioAdmin () {
         return usuarioAdmin;
     }
     public String getClaveAdmin () {
         return claveAdmin;
+    }
+    public String []getListaTransacciones() {
+        return listaTransacciones;
     }
 
     // Método Setter para asignar o cambiar los valores de los 
@@ -101,14 +101,14 @@ public class CajeroElectronico {
     public void setNombreBanco (String dato) {
         nombreBanco = dato;
     }
-    public void setListaTransacciones (String[] dato) {
-        listaTransacciones = dato;
-    }
     public void setUsuarioAdmin (String dato) {
         usuarioAdmin = dato;
     }
     public void setClaveAdmin (String dato) {
         claveAdmin = dato;
+    }
+    public void setListaTransacciones (String[] dato) {
+        listaTransacciones = dato;
     }
 
     // Otros métodos a crear para la aplicación:
@@ -122,7 +122,7 @@ public class CajeroElectronico {
 
     
     // Para ver que esté imprimiendo bien.
-    public void imprimirDetalle () {
+    public void imprimirDetalle(){
         System.out.println("\n------------------------------ ");
         System.out.println(" capacidadTotal = " +capacidadTotal);
         System.out.println(" dineroDisponible = "+dineroDisponible);

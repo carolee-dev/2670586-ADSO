@@ -4,48 +4,49 @@ public class TarjetaDebito {
     String nombrePropietario;
     String numeroTarjeta;
     String nombreBanco;
-    int cantidadDineroEnTarjeta;
-    int cantidadDineroPermitidoParaRetirar;
-    String ultimasTransacciones[]; // (fecha-tipoTransaccion-monto-estado)
+    int montoEnTarjeta;
+    int montoTopeRetiro;
     String clave;
     String estado; // ACTIVA - BLOQUEADA - SUSPENDIDA
+    String ultimasTransacciones[]; // (fecha-tipoTransaccion-monto-estado)
 
     // Método Constructor para inicializar las variables:
-    public TarjetaDebito (String dato1, String dato2, String dato3, int dato4, int dato5, String dato6, String dato7, String dato8) {
-        nombrePropietario = dato1;
-        numeroTarjeta = dato2;
-        nombreBanco = dato3;
-        cantidadDineroEnTarjeta = dato4;
-        cantidadDineroPermitidoParaRetirar = dato5;
-        ultimasTransacciones[] = dato6;
-        clave = dato7;
-        estado = dato8;
+    public TarjetaDebito(String nombrePropietario, String numeroTarjeta, String nombreBanco, int montoEnTarjeta, int montoTopeRetiro, String clave, String estado) {
+        this.nombrePropietario = nombrePropietario;
+        this.numeroTarjeta = numeroTarjeta;
+        this.nombreBanco = nombreBanco;
+        this.montoEnTarjeta = montoEnTarjeta;
+        this.montoTopeRetiro = montoTopeRetiro;
+        this.clave = clave;
+        this.estado = estado;
+
+        ultimasTransacciones = new String[10];
     }
 
     // Método Getter para extraer los valores:
-    public String getNombrePropietario () {
+    public String getNombrePropietario() {
         return nombrePropietario;
     }
-    public String getNumeroTarjeta () {
+    public String getNumeroTarjeta() {
         return numeroTarjeta;
     }
-    public String getNombreBanco () {
+    public String getNombreBanco() {
         return nombreBanco;
     }
-    public int getCantidadDineroEnTarjeta () {
-        return cantidadDineroEnTarjeta;
+    public int getMontoEnTarjeta() {
+        return montoEnTarjeta;
     }
-    public int getCantidadDineroPermitidoParaRetirar () {
-        return cantidadDineroPermitidoParaRetirar;
+    public int getMontoTopeRetiro() {
+        return montoTopeRetiro;
     }
-    public String getUltimasTransacciones ([]) {
-        return ultimasTransacciones[];
-    }
-    public String getClave () {
+    public String getClave() {
         return clave;
     }
-    public String getEstado () {
+    public String getEstado() {
         return estado;
+    }
+    public String [] getUltimasTransacciones() {
+        return ultimasTransacciones;
     }
 
     // Método Setter para asignar o cambiar los valores de los 
@@ -59,20 +60,20 @@ public class TarjetaDebito {
     public void setNombreBanco (String dato) {
         nombreBanco = dato;
     }
-    public void setCantidadDineroEnTarjeta (int dato) {
-        cantidadDineroEnTarjeta = dato;
+    public void setMontoEnTarjeta (int dato) {
+        montoEnTarjeta = dato;
     }
-    public void setCantidadDineroPermitidoParaRetirar (int dato) {
-        cantidadDineroPermitidoParaRetirar = dato;
-    }
-    public void setUltimasTransacciones (String[] dato) {
-        ultimasTransacciones[] = dato;
+    public void setMontoTopeRetiro (int dato) {
+        montoTopeRetiro = dato;
     }
     public void setClave (String dato) {
         clave = dato;
     }
     public void setEstado (String dato) {
         estado = dato;
+    }
+    public void setUltimasTransacciones (String[] dato) {
+        ultimasTransacciones = dato;
     }
 
     // Otros métodos a crear para la aplicación:
