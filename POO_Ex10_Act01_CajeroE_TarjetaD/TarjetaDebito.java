@@ -20,7 +20,7 @@ public class TarjetaDebito {
         this.clave = clave;
         this.estado = estado;
 
-        ultimasTransacciones = new String[10];
+        ultimasTransacciones = new String[5];
     }
 
     // Método Getter para extraer los valores:
@@ -79,6 +79,32 @@ public class TarjetaDebito {
     // Otros métodos a crear para la aplicación:
         // disminuirSaldo(...)
         // aumentarSaldo(...)
+
+    // Para ver que esté imprimiendo bien.
+    public void imprimirDetalleTarjeta() {
+        System.out.println("\n------------------------------ ");
+        System.out.println(" DETALLE TARJETA DÉBITO ");
+        System.out.println(" nombrePropietario = " +nombrePropietario);
+        System.out.println(" numeroTarjeta = " +numeroTarjeta);
+        System.out.println(" nombreBanco = " +nombreBanco);
+        System.out.println(" montoEnTarjeta = " +montoEnTarjeta);
+        System.out.println(" montoTopeRetiro = " +montoTopeRetiro);
+        System.out.println(" clave = " +clave);
+
+        if (montoEnTarjeta > 5000) {
+            System.out.println(" Estado: Tarjeta Activa");
+        } else {
+            System.out.println(" Estado: Fondos Insuficientes");
+        }
+
+        for (int i = 0; i < ultimasTransacciones.length; i++) {
+            System.out.println(" Últimas Transacciones = "+ultimasTransacciones[i]);
+        }
+
+        System.out.println(" ------------------------------ ");
+        System.out.println("");
+        
+    }
 
 
 }

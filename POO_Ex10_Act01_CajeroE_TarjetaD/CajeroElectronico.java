@@ -26,7 +26,7 @@ public class CajeroElectronico {
         this.usuarioAdmin = usuarioAdmin;
         this.claveAdmin = claveAdmin;
 
-        listaTransacciones = new String[20];
+        listaTransacciones = new String[10];
     }
 
     // Otro método CONSTRUCTOR para inicializar las variables: ESTE RECIBE 4 DATOS
@@ -42,7 +42,7 @@ public class CajeroElectronico {
         this.billete_50 = 0;
         this.billete_100 = 0;
 
-        listaTransacciones = new String [20];
+        listaTransacciones = new String [10];
 
     }
 
@@ -124,6 +124,7 @@ public class CajeroElectronico {
     // Para ver que esté imprimiendo bien.
     public void imprimirDetalle(){
         System.out.println("\n------------------------------ ");
+        System.out.println(" DETALLE CAJERO ELECTRÓNICO ");
         System.out.println(" capacidadTotal = " +capacidadTotal);
         System.out.println(" dineroDisponible = "+dineroDisponible);
         System.out.println(" billete_10 = "+billete_10);
@@ -142,6 +143,7 @@ public class CajeroElectronico {
         System.out.println(" ------------------------------ ");
         System.out.println("");
     }
+
     // abastecerCajero(...)
     public boolean abastecerCajero(int billete_10, int billete_20, int billete_50, int billete_100) {
         // Calcular total abastecido
@@ -166,11 +168,11 @@ public class CajeroElectronico {
         }
     }
 
-    public void registrarTransaccion (String tipo, String numeroTarjeta, int monto, String estado) {
+    public void registrarTransaccion(String tipo, String numeroTarjeta, int monto, String estado) {
         // Construir texto que va dentro de la listaTransacciones
         Date fecha = new Date(); // Objeto Date en JDK. Se instancia.
                    //metodo .toString para 'jalar' la fecha.
-        String texto = fecha.toString()" - "+tipo+ " - "+numeroTarjeta+" - "+monto+" - "+estado;
+        String texto = fecha.toString()+" - "+tipo+ " - "+numeroTarjeta+" - "+monto+" - "+estado;
 
         // Buscar un índice donde esté vacío y meter
         int indice = -1;
@@ -188,6 +190,11 @@ public class CajeroElectronico {
             }
             listaTransacciones[listaTransacciones.length -1] = texto;
         }
+
+    }
+
+    public void consignarDineroTarjeta() {
+        
 
     }
 
