@@ -19,7 +19,7 @@ public class Example02{
 
     }
 
-    // función con array:
+    // función con array de enteros:
     public static void imprimirArreglo(int [] arreglo ){ // indicar la dimensión antes del nombre del parámetro
         for( int i = 0; i < arreglo.length; i++){
             System.out.print(" [ "+arreglo[i]+" ] ");
@@ -30,12 +30,12 @@ public class Example02{
     public static int[] llenarArreglo(int [] arreglo){
         for(int i = 0; i < arreglo.length; i++){
             int aleatorio = (int) (Math.random()*100);
-            arreglo[i] = aleatorio; // En la posición del arreglo, recíbame los aleatorios
+            arreglo[i] = aleatorio; // En la posición i del arreglo, recíbame los aleatorios
         }
         return arreglo;
     }
 
-    // función con String:
+    // función con array de String:
     public static String[] restablecerArreglo( String [] arreglo){
         for (int i = 0; i < arreglo.length; i++){
             arreglo[i] = "Llenito";
