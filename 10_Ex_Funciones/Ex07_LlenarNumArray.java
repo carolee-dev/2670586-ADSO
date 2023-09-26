@@ -1,5 +1,5 @@
 /* Implementa una función que reciba un arreglo de números y 
-devuelva el arreglo lleno con números aleatorios.*/
+devuelva el arreglo lleno con números aleatorios. */
 
 public class Ex07_LlenarNumArray{
 
